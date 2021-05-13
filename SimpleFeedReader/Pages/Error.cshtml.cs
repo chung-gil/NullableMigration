@@ -7,10 +7,10 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace SimpleFeedReader.Pages
 {
-    // <SnippetStartErrorModel>
+    // <SnippetStartErrorModel>    
     public class ErrorModel : PageModel
     {
-        public string RequestId { get; set; }
+        public string? RequestId { get; set; }
 
         public bool ShowRequestId => !string.IsNullOrEmpty(RequestId);
 
@@ -18,6 +18,6 @@ namespace SimpleFeedReader.Pages
         {
             RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier;
         }
-    }
+    }    
     // </SnippetStartErrorModel>
 }
